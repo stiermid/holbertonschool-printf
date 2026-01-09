@@ -13,6 +13,12 @@ int print_int(va_list *args)
 	int divisor = 1;
 	int count = 0;
 	char c;
+	
+	if (num == INT_MIN)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
+	}
 
 	if (num == 0)
 	{
